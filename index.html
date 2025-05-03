@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Dark Theme</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+        @theme {
+          --font-roboto: 'Roboto', sans-serif;
+          --color-dark: #0d1137;
+          --color-dark-c:#0000;
+          --color-clifford: #5c3c92;
+          --color-light: #e5e5dc;
+
+        }
+      </style>
+</head>
+<body class="h-screen w-full bg-gray-200 dark:bg-gray-800 " >
+    <div class="flex justify-center items-center flex-col gap-4 mt-30 relative w-full">
+        <div><h1 class="font-[roboto] text-[2.5rem] dark:text-white">Dark Mode Assignment</h1></div>
+
+    <div> <h2 class="font-[roboto] text-[2rem] dark:text-white">Welcome to the light side</h2></div>
+    <div class="flex justify-center items-center w-[450px] 
+    p-4 bg-white rounded-[10px] shadow-sm dark:bg-gray-400"> 
+        
+        <p class="dark:text-white text-gray-800 font-[roboto] text-[18px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus veritatis 
+            ipsa dolore, quibusdam iste minima deleniti illo debitis sapiente. Beatae illum 
+            voluptatem temporibus voluptatibus voluptate temporibus voluptatibus voluptate.</p>    
+    </div>
+
+    <button onclick="flip()" class=" absolute font-[roboto] rounded-full top-0 right-100 
+    w-[40px] h-[40px] dark:bg-white bg-black hover:cursor-pointer text-white dark:text-black"> click</button>
+
+    <h3 class="pt-20 dark:text-white text-gray-800 font-[roboto]">In future i will seek to update the code to  make it more better  <br>
+        this was done with Tailwindcss</h3>
+    </div>
+    
+    
+
+    
+</body>
+
+<script>
+    function flip() {
+        document.documentElement.classList.toggle('dark')
+
+    };
+</script>
+</html>
