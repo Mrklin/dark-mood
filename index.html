@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,9 @@
     <div class="flex justify-center ml-4 md:ml-0 items-center flex-col gap-3 mt-10 md:mt-30 relative w-full">
         <div><h1 class="font-[roboto] text-[2.5rem] dark:text-white">Dark Mode Assignment</h1></div>
 
-    <div> <h2 class="font-[roboto] text-[2rem] dark:text-white">Welcome to the light side</h2></div>
+    <div> <h2 class="block dark:hidden font-[roboto] text-[2rem] text-gray-800">Welcome to the light side</h2>
+        <h2 class=" hidden dark:block font-[roboto] text-[2rem] text-white">Welcome to the dark side</h2>
+    </div>
 
     <div class="flex justify-center items-center w-[250px] md:w-[450px]   
     p-4 bg-white rounded-[10px] shadow-sm dark:bg-gray-400 content-contain"> 
@@ -34,11 +36,12 @@
             voluptatem temporibus voluptatibus voluptate temporibus voluptatibus voluptate.</p>    
     </div>
 
-    <button onclick="flip()" class=" absolute font-[roboto] rounded-full top-0 right-5 lg:right-100 
-    w-[40px] h-[40px] dark:bg-white bg-black hover:cursor-pointer text-white dark:text-black"> click</button>
+    <button id="toggle" onclick="swap()" class=" absolute font-[roboto] rounded-full top-0 right-5 lg:right-100 
+    w-[40px] h-[40px] bg-white hover:cursor-pointer text-white "
+    > <img id="photo" src="./assets/image01.svg" class=" block dark:hidden" alt="body"> <img id="photo" src="./assets/image02.svg" class="hidden dark:block" alt="body"> </button>
 
-    <h3 class="pt-20 dark:text-white text-gray-800 font-[roboto]">In future i will seek to update the code to  make it more better  <br>
-        this was done with Tailwindcss</h3>
+    <h3 class="pt-20 dark:text-white text-gray-800 font-[roboto] align-center"> <strong class="block dark:hidden">!!Click the Moon above</strong> <strong class="hidden dark:block">!!Click the Sun above</strong> <br>
+        This was done with TailwindCSS</h3>
     </div>
     
     
@@ -47,8 +50,20 @@
 </body>
 
 <script>
-    function flip() {
+
+
+
+    function swap() {
+        
         document.documentElement.classList.toggle('dark');
+    
     };
+
+    
+    
+
+   
+    
+
 </script>
 </html>
