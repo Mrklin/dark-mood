@@ -21,19 +21,20 @@
       </style>
 </head>
 <body class="h-screen w-full bg-gray-200 dark:bg-gray-800 " >
-    <div class="flex justify-center items-center flex-col gap-4 mt-30 relative w-full">
+    <div class="flex justify-center ml-4 md:ml-0 items-center flex-col gap-3 mt-10 md:mt-30 relative w-full">
         <div><h1 class="font-[roboto] text-[2.5rem] dark:text-white">Dark Mode Assignment</h1></div>
 
     <div> <h2 class="font-[roboto] text-[2rem] dark:text-white">Welcome to the light side</h2></div>
-    <div class="flex justify-center items-center w-[450px] 
-    p-4 bg-white rounded-[10px] shadow-sm dark:bg-gray-400"> 
+
+    <div class="flex justify-center items-center w-[250px] md:w-[450px]   
+    p-4 bg-white rounded-[10px] shadow-sm dark:bg-gray-400 content-contain"> 
         
         <p class="dark:text-white text-gray-800 font-[roboto] text-[18px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus veritatis 
             ipsa dolore, quibusdam iste minima deleniti illo debitis sapiente. Beatae illum 
             voluptatem temporibus voluptatibus voluptate temporibus voluptatibus voluptate.</p>    
     </div>
 
-    <button onclick="flip()" class=" absolute font-[roboto] rounded-full top-0 right-100 
+    <button onclick="flip()" class=" absolute font-[roboto] rounded-full top-0 right-5 lg:right-100 
     w-[40px] h-[40px] dark:bg-white bg-black hover:cursor-pointer text-white dark:text-black"> click</button>
 
     <h3 class="pt-20 dark:text-white text-gray-800 font-[roboto]">In future i will seek to update the code to  make it more better  <br>
@@ -47,8 +48,7 @@
 
 <script>
     function flip() {
-        document.documentElement.classList.toggle('dark')
-
+        document.documentElement.classList.toggle('dark');
     };
 </script>
 </html>
